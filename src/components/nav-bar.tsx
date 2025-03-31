@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface NavBarProps{
-    active: "dashboard" | "categorias" | "reservas"
+    active: "dashboard" | "categories" | "booking"
 }
 
 export default function NavBar(props: NavBarProps) {
@@ -15,12 +15,12 @@ export default function NavBar(props: NavBarProps) {
     ]
 
     return (
-        <nav className="flex justify-between items-center py-6 px-12 bg-yellow-400">
+        <nav className="flex justify-between items-center py-6 px-12 bg-primary">
             <h1 className="text-2xl font-black">FLASH INK</h1>
             <ul className="flex gap-16 font-bold text-sm">
 
                 {links.map( link => 
-                    <li className={active === link.label ? activeClass : ""}>
+                    <li key={link.label} className={active === link.label ? activeClass : ""}>
                         <Link className="uppercase" href={link.href}>{link.label}</Link>
                     </li>
                     
