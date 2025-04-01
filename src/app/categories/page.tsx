@@ -15,7 +15,7 @@ export default async function CategoriesPage() {
 
             <main className="flex justify-center">
                 <div className="bg-stone-300 my-10 p-4 min-w-2/3">
-                    <div className="flex justify-between">
+                    <div className="flex justify-between mb-5">
                         <h1 className="text-xl font-semibold">CATEGORIAS</h1>
                         <Button asChild>
                             <Link href="/categories/form">

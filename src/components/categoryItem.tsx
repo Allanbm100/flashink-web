@@ -7,7 +7,7 @@ interface CategoryItemProps {
 
 export default function CategoryItem(category: CategoryItemProps) {
     return (
-        <div className="flex justify-between mt-2">
+        <div className="flex justify-between mt-4 px-2">
             <div className="flex gap-2">
                 <Icon name={category.category.icon} />
                 <span>{category.category.name}</span>
