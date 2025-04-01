@@ -1,17 +1,17 @@
 import Link from "next/link";
 
-interface NavBarProps{
+interface NavBarProps {
     active: "dashboard" | "categories" | "booking"
 }
 
 export default function NavBar(props: NavBarProps) {
     const { active } = props
-    const activeClass = "border-b-2"
+    const activeClass = "border-b-2 border-zinc-900"
 
     const links = [
         { label: "dashboard", href: "/dashboard" },
         { label: "categories", href: "/categories" },
-        { label: "booking", href: "/booking" },
+        // { label: "booking", href: "/booking" },
     ]
 
     return (
@@ -19,11 +19,11 @@ export default function NavBar(props: NavBarProps) {
             <h1 className="text-2xl font-black">FLASH INK</h1>
             <ul className="flex gap-16 font-bold text-sm">
 
-                {links.map( link => 
+                {links.map(link =>
                     <li key={link.label} className={active === link.label ? activeClass : ""}>
                         <Link className="uppercase" href={link.href}>{link.label}</Link>
                     </li>
-                    
+
                 )}
             </ul>
             <div className="flex gap-2 items-center p-2 border rounded-md">
