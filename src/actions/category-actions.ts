@@ -26,7 +26,7 @@ export async function createCategory(initialValue: any, formData: FormData) {
 
     if (!response.ok) {
         const json = await response.json()
-        const errors = json.errors.defaultMessage
+        const errors = json.errors
 
         return {
             values: {
